@@ -8,7 +8,6 @@
  *
  * @author guest
  */
-public interface AIPlayer {
-    public void run();
-    public void setGame (GameLoop GL);
+public interface AIPlayer extends Player{
+    
 }  
