@@ -6,7 +6,7 @@
 
 /**
  *
- * @author guest
+ * Class pemain
  */
 public class HumanPlayer implements Player {
     public void run(){
