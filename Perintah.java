@@ -9,5 +9,5 @@
  * @author guest
  */
 public interface Perintah {
-    public execute (GameState GS);
+    public void execute (GameState GS);
 }
