@@ -9,7 +9,7 @@
  * Class untuk menerima mulai input dan akhir input
  */
 public class PerintahStartStopBuatKata {
-    public execute(GameState GS){
+    public void execute(GameState GS){
         
     }
 }
