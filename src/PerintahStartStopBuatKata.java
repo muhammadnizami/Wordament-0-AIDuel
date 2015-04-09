@@ -6,8 +6,10 @@
 
 /**
  *
- * @author guest
+ * Class untuk menerima mulai input dan akhir input
  */
-public interface Perintah {
-    public void execute (GameState GS);
+public class PerintahStartStopBuatKata {
+    public void execute(GameState GS){
+        
+    }
 }

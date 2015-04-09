@@ -6,7 +6,7 @@
 
 /**
  *
- * @author guest
+ * Interface untuk AI
  */
 public interface AIPlayer extends Player{
     
