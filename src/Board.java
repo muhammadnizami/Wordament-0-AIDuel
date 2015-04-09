@@ -51,6 +51,12 @@ public class Board {
     public boolean[][] getVisited(){
         return null;/* belum diimplementasi*/
     }
+    /** mengembalikan lokasi pointer
+     * boleh tidak dicopy
+     */
+    public Point getPointer(){
+        return null;/* belum diimplementasi*/
+    }
     /** mengembalikan stack karakter
      * boleh tidak dicopy
      */
@@ -63,9 +69,45 @@ public class Board {
     public Stack<Point> getSP(){
         return null;/* belum diimplementasi*/
     }
+    /** memulai board
+     * mengeset stack menjadi kosong
+     */
     public void StartBoard(){
-        
+        /* belum diimplementasi*/
+    }
+    /** memulai pembuatan string*/
+    public void StartBuatString(){
+        /* belum diimplementasi*/
+    }
+    /** menghentikan pembuatan string*/
+    public String StopDanKirimString(){
+        return null; /* belum diimplementasi*/
     }
     
+    final Point DIRUPLEFT = new Point(-1,-1);
+    final Point DIRUP = new Point(0,-1);
+    final Point DIRUPRIGHT = new Point(0,-1);
+    final Point DIRLEFT = new Point(0,-1);
+    final Point DIRRIGHT = new Point(0,-1);
+    final Point DIRDOWNLEFT = new Point(0,-1);
+    final Point DIRDOWN = new Point(0,-1);
+    final Point DIRDOWNRIGHT = new Point(0,-1);
+    /**menggerakkan pointer
+     * 
+     * @param dir arah, di antara konstanta-konstanta DIRUPLEFT,DIRUP,DIRUPRIGHT,DIRLEFT,DIRRIGHT,DIRDOWNLEFT,DIRDOWN,DIRDOWNRIGHT. Selain itu, undefined behavior.
+     */
+    public void MovePointer(Point dir){
+        /* belum diimplementasi*/
+    }
+    /**memutar sembilan puluh derajat clockwise
+     * 
+     */
+    public void PutarBoard(){
+        /* belum diimplementasi*/
+    }
+    /**mengembalikan string yang sedang dibentuk*/
+    public String yangSedangDibentuk(){
+        return null;/* belum diimplementasi*/
+    }
     
 }
