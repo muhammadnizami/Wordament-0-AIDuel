@@ -1,5 +1,6 @@
 import java.util.Set;
 import java.util.SortedSet;
+import java.awt.Point;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -33,6 +34,7 @@ public class GameState {
      * 
      */
     public void StartStopBuatKata(){
+        /* belum diimplementasi*/
         
     }
     
@@ -41,14 +43,17 @@ public class GameState {
      * @param _dir arah
      */
     public void MovePointer(Point _dir){
+        /* belum diimplementasi*/
         
     }
     /**memutar board*/
     public void PutarBoard(){
+        /* belum diimplementasi*/
         
     }
     /**mengembalikan board*/
-    public void GetBoard(){
+    public Board GetBoard(){
+        return null;/* belum diimplementasi*/
         
     }
     

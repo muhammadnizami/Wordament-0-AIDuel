@@ -8,7 +8,7 @@
  *
  * @author guest
  */
-public Interface Player {
+public interface Player {
     public void run();
     public void setGame (GameLoop GL);
 }

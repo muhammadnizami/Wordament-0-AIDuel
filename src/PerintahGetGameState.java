@@ -10,12 +10,12 @@
  */
 public class PerintahGetGameState {
     /*Atribut*/
-    private Gamestate GS;
+    private GameState GS;
     /*Method*/
-    public void execute(Gamestate GS){
+    public void execute(GameState GS){
         
     }
-    public void getGS(){
+    public GameState getGS(){
         return GS;
     }
 }
