@@ -20,6 +20,7 @@ public class Board {
     private boolean[][] visited = new boolean[4][4];
     Stack<Character> SC = new Stack<Character>();
     Stack<Point> SP = new Stack<Point>();
+    private boolean sedangBuatString;
     /** ctor */
     public Board(){
         board = new char[4][4];
@@ -68,6 +69,14 @@ public class Board {
      */
     public Stack<Point> getSP(){
         return null;/* belum diimplementasi*/
+    }
+    
+    /**mengembalikan boolean apakah sedang membuat string
+     * 
+     * @return 
+     */
+    public boolean getSedangBuatString(){
+        return sedangBuatString; /*belum diimplementasi*/
     }
     /** memulai board
      * mengeset stack menjadi kosong
