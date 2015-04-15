@@ -13,19 +13,13 @@ import java.util.Set;
  * @author LUCKY
  */
 public class DataFile {
-    private File F{
-    
-    }
-    private Boolean isMatChar{
-    
-    }
-    private Boolean isKamus{
-    
-    }
+    private File F;
+    private boolean isMatChar;
+    private boolean isKamus;
     public Set<String> getKamus(){
-        
+        return null;
     }
-    public char[4][4] getMatChar(){
-        
+    public char[][] getMatChar(){
+        return null;
     }
 }
