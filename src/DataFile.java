@@ -10,12 +10,19 @@ import java.util.Set;
 
 /**
  *
- * @author LUCKY
+ *
  */
 public class DataFile {
     private File F;
     private boolean isMatChar;
     private boolean isKamus;
+    
+    public static final String FILETYPE_MATCHAR = "Matchar";
+    public static final String FILETYPE_KAMUS = "Kamus";
+    public DataFile(File F, String Type){
+        
+    }
+    
     public Set<String> getKamus(){
         return null;
     }
