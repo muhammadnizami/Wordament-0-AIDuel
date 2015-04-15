@@ -203,10 +203,18 @@ public class BoardTest {
     @Test
     public void testYangSedangDibentuk() {
         System.out.println("yangSedangDibentuk");
-        Board instance = new Board();
-        String expResult = "";
+        char[][] A = {  {'A','B','C','D'},
+                        {'E','F','G','H'},
+                        {'I','J','K','L'},
+                        {'M','N','O','P'}
+        };
+        Board instance = new Board(A);
+        String expResult = "A";
+        instance.StartBoard();
+        instance.StartBuatString();
         String result = instance.yangSedangDibentuk();
         assertEquals(expResult, result);
+        assertEquals(false, instance.getSedangBuatString());
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
