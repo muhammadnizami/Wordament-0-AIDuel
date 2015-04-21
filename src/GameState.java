@@ -34,7 +34,7 @@ public class GameState {
     public GameState(char[][] MatKar, Set<String> _kamus){
         assert(MatKar.length==4);
         for (char[] baris : MatKar) assert (baris.length==4);
-        
+        kataTerbentuk = new TreeSet<>();
         CB = new Board(MatKar);
         kamus = _kamus;
         CB.StartBoard();
@@ -82,6 +82,14 @@ public class GameState {
      * @return Board permainan*/
     public Board GetBoard(){
         return CB;/* belum diimplementasi*/
+    }
+    
+    /**
+     * 
+     * @return himpunan kata yang telah terbentuk
+     */
+    public SortedSet<Kata> getKataTerbentuk(){
+        return kataTerbentuk;
     }
     
     public int totalScore(){
