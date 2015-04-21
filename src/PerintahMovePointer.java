@@ -7,7 +7,7 @@ import java.awt.Point;
 
 /**
  *
- * @author guest
+ * kelas perintah menggerakkan pointer untuk dikirimkan kepada gameloop
  */
 public class PerintahMovePointer {
     private Point dir;

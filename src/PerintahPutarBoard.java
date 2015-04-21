@@ -6,7 +6,7 @@
 
 /**
  *
- * @author nim_13512501
+ * ini adalah perintah yang dikirimkan ke gameloop untuk memutar board gamestate
  */
 public class PerintahPutarBoard implements Perintah{
     
