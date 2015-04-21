@@ -6,6 +6,7 @@
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  *
@@ -110,13 +111,17 @@ public class Kata implements Comparable<Kata>{
     /**
      * Implementasi Comparable
      * Lihat referensi Comparable
-     * Membandingkan dua kata berdasarkan score
+     * Membandingkan dua kata berdasarkan score terlebih dahulu
+     * bila sama, membandingkan dua kata berdasarkan string k
      */
     @Override
     public int compareTo(Kata o){
         Integer lhs = score;
         Integer rhs = o.score;
-        return lhs.compareTo(rhs);
+        if (!Objects.equals(lhs, rhs))
+            return lhs.compareTo(rhs);
+        else
+            return k.compareTo(o.k);
     }
     
 }
