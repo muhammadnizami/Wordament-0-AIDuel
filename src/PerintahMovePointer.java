@@ -9,7 +9,7 @@ import java.awt.Point;
  *
  * kelas perintah menggerakkan pointer untuk dikirimkan kepada gameloop
  */
-public class PerintahMovePointer {
+public class PerintahMovePointer implements Perintah{
     private Point dir;
     public static final Point DIRUPLEFT = Board.DIRUPLEFT;
     public static final Point DIRUP = Board.DIRUP;
@@ -32,6 +32,7 @@ public class PerintahMovePointer {
      * eksekusi
      * @param GS 
      */
+    @Override
     public void execute(GameState GS){
         GS.MovePointer(dir);
     }

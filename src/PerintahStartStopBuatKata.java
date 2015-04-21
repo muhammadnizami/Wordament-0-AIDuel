@@ -8,7 +8,8 @@
  *
  * Class untuk menerima mulai input dan akhir input
  */
-public class PerintahStartStopBuatKata {
+public class PerintahStartStopBuatKata implements Perintah{
+    @Override
     public void execute(GameState GS){
         GS.StartStopBuatKata();
     }

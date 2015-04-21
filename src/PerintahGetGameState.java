@@ -8,16 +8,22 @@
  *
  * Mengambil Gamestate dan mengcopynya ke GS
  */
-public class PerintahGetGameState {
+public class PerintahGetGameState implements Perintah {
     /*Atribut*/
     private GameState GS = null;
+    boolean executed = false;
     /*Method*/
+    @Override
     public synchronized void execute(GameState _GS){
         GS = new GameState(_GS);
+        
+        //memberi tahu
+        executed = true;
         this.notify();
     }
     public synchronized GameState getGS() throws InterruptedException{
-        this.wait();
+        while (!executed)
+            this.wait();
         return GS;
     }
 }
