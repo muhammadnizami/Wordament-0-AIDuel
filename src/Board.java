@@ -1,5 +1,6 @@
 import java.util.Stack;
 import java.awt.Point;
+import java.util.Arrays;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -238,6 +239,22 @@ public class Board {
             retval+=tmprev.pop();
         }
         return retval;
+    }
+    
+    //untuk testing
+    @Override
+    public boolean equals(Object o){
+        if (o==null)
+            return false;
+        if (getClass()!=o.getClass())
+            return false;
+        final Board rhs = (Board)o;
+        return Arrays.deepEquals(board, rhs.board)
+                && Arrays.deepEquals(visited,rhs.visited)
+                && sedangBuatString==rhs.sedangBuatString
+                && SC.equals(rhs.SC)
+                && pointer.equals(rhs.pointer)
+                && SP.equals(rhs.SP);
     }
     
 }
