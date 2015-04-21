@@ -25,6 +25,7 @@ public class GameState {
         kataTerbentuk = new TreeSet<Kata>();
         CB.StartBoard();
     }
+   
     /**ctor
      * membuat sebuah gamestate dengan matriks kata Matkar dan kamus kata _kamus
      * @param MatKar matriks 4X4
@@ -38,6 +39,16 @@ public class GameState {
         kamus = _kamus;
         CB.StartBoard();
         
+    }
+    
+    /** cctor
+     * deep copy
+     * @param G 
+     */
+    public GameState(GameState G){
+        CB = new Board(G.CB);
+        kamus = new TreeSet<>(G.kamus);
+        kataTerbentuk = new TreeSet<>(G.kataTerbentuk);
     }
     
     /**memulai/mengakhiri pembuatan kata
