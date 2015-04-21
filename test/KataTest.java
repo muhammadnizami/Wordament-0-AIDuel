@@ -52,6 +52,9 @@ public class KataTest {
         int expResult = 0;
         int result = instance.compareTo(o);
         assertEquals(expResult, result);
+        assertEquals(0,(new Kata("A").compareTo(new Kata("A"))));
+        assertNotSame(0,(new Kata("A").compareTo(new Kata("AB"))));
+        assertNotSame(0,(new Kata("COWS").compareTo(new Kata("RAZE"))));
     }
     
     @Test
