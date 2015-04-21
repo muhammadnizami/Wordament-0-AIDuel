@@ -34,7 +34,7 @@ public class DataFileTest {
     @Test
     public void testKamus() throws Exception {
         System.out.println("getKamus");
-        File F = new File("test\\dftest\\Dictionary.txt");
+        File F = new File("test/dftest/Dictionary.txt");
         DataFile instance = new DataFile(F,"Kamus");
         Set<String> Kamus = instance.getKamus();
         boolean result = Kamus.contains("RUGGEDEST");
@@ -47,7 +47,7 @@ public class DataFileTest {
     @Test
     public void testKamus2() throws Exception {
         System.out.println("getKamus");
-        File F = new File("test\\dftest\\Dictionary.txt");
+        File F = new File("test/dftest/Dictionary.txt");
         DataFile instance = new DataFile(F,"Kamus");
         Set<String> Kamus = instance.getKamus();
         boolean result = Kamus.contains("ADSD");
@@ -63,7 +63,7 @@ public class DataFileTest {
     @Test
     public void testGetMatChar4x4() throws Exception {
         System.out.println("getMatChar4x4");
-        File F = new File("test\\dftest\\array.txt");
+        File F = new File("test/dftest/array.txt");
         DataFile instance = new DataFile(F,"Kamus");
         char[][] expResult = new char[][] {{'a','b','c','d'},{'e','f','g','h'},{'i','j','k','l'},{'m','n','o','p'}};
         char[][] result = instance.getMatChar4x4();
@@ -74,7 +74,7 @@ public class DataFileTest {
     @Test
     public void testGetMatChar4x42() throws Exception {
         System.out.println("getMatChar4x4");
-        File F = new File("test\\dftest\\array1.txt");
+        File F = new File("test/dftest/array1.txt");
         DataFile instance = new DataFile(F,"Kamus");
         char[][] expResult = new char[][] {{'a','e','i','m'},{'b','f','j','n'},{'c','g','k','o'},{'d','h','l','p'}};
         char[][] result = instance.getMatChar4x4();
@@ -89,7 +89,7 @@ public class DataFileTest {
     @Test
     public void testIsfileKamus() {
         System.out.println("isfileKamus");
-         File F = new File("test\\dftest\\Dictionary.txt");
+         File F = new File("test/dftest/Dictionary.txt");
         DataFile instance = new DataFile(F,"Kamus");
         boolean expResult = true;
         boolean result = instance.isfileKamus();
@@ -100,7 +100,7 @@ public class DataFileTest {
     @Test
     public void testIsfileKamus2() {
         System.out.println("isfileKamus");
-        File F = new File("test\\dftest\\array.txt");
+        File F = new File("test/dftest/array.txt");
         DataFile instance = new DataFile(F,"Matchar");
         boolean expResult = false;
         boolean result = instance.isfileKamus();
@@ -116,7 +116,7 @@ public class DataFileTest {
     @Test
     public void testIsfileMatChar() {
         System.out.println("isfileMatChar");
-        File F = new File("test\\dftest\\array.txt");
+        File F = new File("test/dftest/array.txt");
         DataFile instance = new DataFile(F,"Matchar");
         boolean expResult = true;
         boolean result = instance.isfileMatChar();
@@ -128,7 +128,7 @@ public class DataFileTest {
     @Test
     public void testIsfileMatChar2() {
         System.out.println("isfileMatChar");
-        File F = new File("test\\dftest\\Dictionary.txt");
+        File F = new File("test/dftest/Dictionary.txt");
         DataFile instance = new DataFile(F,"Kamus");
         boolean expResult = false;
         boolean result = instance.isfileMatChar();
