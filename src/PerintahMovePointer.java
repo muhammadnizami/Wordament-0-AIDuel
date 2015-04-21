@@ -15,7 +15,7 @@ public class PerintahMovePointer {
         
     }
     public void execute(GameState GS){
-        
+        GS.MovePointer(dir);
     }
     public Point getDir(){
         return dir;

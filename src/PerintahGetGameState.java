@@ -10,12 +10,14 @@
  */
 public class PerintahGetGameState {
     /*Atribut*/
-    private GameState GS;
+    private GameState GS = null;
     /*Method*/
-    public void execute(GameState GS){
-        
+    public synchronized void execute(GameState _GS){
+        GS = new GameState(_GS);
+        this.notify();
     }
-    public GameState getGS(){
+    public synchronized GameState getGS() throws InterruptedException{
+        this.wait();
         return GS;
     }
 }

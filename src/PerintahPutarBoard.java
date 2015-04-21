@@ -6,10 +6,12 @@
 
 /**
  *
- * Class untuk menerima mulai input dan akhir input
+ * @author nim_13512501
  */
-public class PerintahStartStopBuatKata {
+public class PerintahPutarBoard implements Perintah{
+    
+    @Override
     public void execute(GameState GS){
-        GS.StartStopBuatKata();
+        GS.PutarBoard();
     }
 }

@@ -1,6 +1,6 @@
 import java.util.Set;
-import java.util.Queue; //dapat diganti, tergantung 
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,18 +14,21 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class GameLoop extends Thread{
     private GameState GS;
-    Queue<Perintah> SQP = new ConcurrentLinkedQueue<Perintah>();
+    private BlockingQueue<Perintah> antrianPerintah;
     /**ctor
      * 
      */
     public GameLoop(){
-        /* belum diimplementasi*/
+        GS = new GameState();
+        antrianPerintah= new LinkedBlockingQueue<Perintah>();
     }
     /**ctor
      * 
      * @param _GS (unsafe)
      */
     public GameLoop(GameState _GS){
+        GS = _GS;
+        antrianPerintah= new LinkedBlockingQueue<>();
         /*belum diimplementasi*/
     }
     /**ctor
@@ -34,15 +37,25 @@ public class GameLoop extends Thread{
      * @param Kamus kamus kata (unsafe, bisa jadi tidak dicopy)
      */
     public GameLoop(char[][] matchar, Set<String> Kamus){
-        /*belum diimplementasi*/
+        GS = new GameState(matchar,Kamus);
+        antrianPerintah= new LinkedBlockingQueue<>();
     }
     
     /** interrupt diwarisi dari Thread*/
     /**menjalankan thread
      * menerima perintah dan melaksanakannya hingga diinterupt
      */
+    @Override
     public void run(){
-        /*belum diimplementasi*/
+        while (!interrupted()){
+            try{
+                Perintah t = antrianPerintah.take();
+                t.execute(GS);
+            }catch(InterruptedException e){
+                antrianPerintah.clear();
+            }
+            /*belum diimplementasi*/
+        }
     }
     
     /**
@@ -50,6 +63,7 @@ public class GameLoop extends Thread{
      * @param P 
      */
     public void lakukanPerintah(Perintah P){
+        antrianPerintah.add(P);
         /*belum diimplementasi*/
     }   
     
