@@ -10,6 +10,6 @@
  */
 public class PerintahStartStopBuatKata {
     public void execute(GameState GS){
-        
+        GS.StartStopBuatKata();
     }
 }
