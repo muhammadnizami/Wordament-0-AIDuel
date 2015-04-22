@@ -1,6 +1,7 @@
 import java.util.Stack;
 import java.awt.Point;
 import java.util.Arrays;
+import java.util.Objects;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -241,7 +242,10 @@ public class Board {
         return retval;
     }
     
-    //untuk testing
+    /**
+     * untuk testing
+     * 
+     * */
     @Override
     public boolean equals(Object o){
         if (o==null)
@@ -255,6 +259,20 @@ public class Board {
                 && SC.equals(rhs.SC)
                 && pointer.equals(rhs.pointer)
                 && SP.equals(rhs.SP);
+    }
+
+    
+    /**hanya untuk testing*/
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 47 * hash + Arrays.deepHashCode(this.board);
+        hash = 47 * hash + Arrays.deepHashCode(this.visited);
+        hash = 47 * hash + Objects.hashCode(this.SC);
+        hash = 47 * hash + Objects.hashCode(this.SP);
+        hash = 47 * hash + Objects.hashCode(this.pointer);
+        hash = 47 * hash + (this.sedangBuatString ? 1 : 0);
+        return hash;
     }
     
 }
