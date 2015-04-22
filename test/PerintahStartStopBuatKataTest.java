@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+import com.Wordament0AIDUEL.GameState;
+import com.Wordament0AIDUEL.PerintahStartStopBuatKata;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

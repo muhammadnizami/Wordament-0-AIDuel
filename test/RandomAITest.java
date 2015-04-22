@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+import com.Wordament0AIDUEL.GameLoop;
+import com.Wordament0AIDUEL.GameState;
+import com.Wordament0AIDUEL.RandomAI;
 import static java.lang.Thread.sleep;
 import org.junit.Assert;
 import org.junit.Test;

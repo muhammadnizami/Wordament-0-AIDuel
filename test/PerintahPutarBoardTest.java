@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+import com.Wordament0AIDUEL.Board;
+import com.Wordament0AIDUEL.GameState;
+import com.Wordament0AIDUEL.PerintahPutarBoard;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

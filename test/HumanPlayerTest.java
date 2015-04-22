@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 
+import com.Wordament0AIDUEL.GameLoop;
+import com.Wordament0AIDUEL.Board;
+import com.Wordament0AIDUEL.HumanPlayer;
+import com.Wordament0AIDUEL.GameState;
 import java.awt.event.KeyEvent;
 import static java.awt.event.KeyEvent.*;
 import java.awt.event.KeyListener;

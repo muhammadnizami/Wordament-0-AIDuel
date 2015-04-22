@@ -4,6 +4,13 @@
  * and open the template in the editor.
  */
 
+import com.Wordament0AIDUEL.GameLoop;
+import com.Wordament0AIDUEL.Board;
+import com.Wordament0AIDUEL.GameState;
+import com.Wordament0AIDUEL.PerintahGetGameState;
+import com.Wordament0AIDUEL.PerintahStartStopBuatKata;
+import com.Wordament0AIDUEL.PerintahPutarBoard;
+import com.Wordament0AIDUEL.PerintahMovePointer;
 import static java.lang.Thread.sleep;
 import org.junit.Test;
 import static org.junit.Assert.*;

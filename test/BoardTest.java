@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import com.Wordament0AIDUEL.Board;
 import java.awt.Point;
 import java.util.Stack;
 import org.junit.After;
