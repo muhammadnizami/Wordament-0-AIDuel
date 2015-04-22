@@ -49,10 +49,13 @@ public class GameLoop extends Thread{
     public void run(){
         while (!interrupted()){
             try{
+                System.out.println("menunggu/menjalankan perintah");
                 Perintah t = antrianPerintah.take();
                 t.execute(GS);
             }catch(InterruptedException e){
                 antrianPerintah.clear();
+                System.out.println("GameLoop interrupted");
+                break;
             }
             /*belum diimplementasi*/
         }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import static java.lang.Thread.sleep;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -17,7 +18,7 @@ public class GameLoopTest {
     }
 
     @Test
-    public void testRun() {
+    public void testRun() throws InterruptedException {
         System.out.println("run");
         GameState target = new GameState();
         GameState pembanding = new GameState(target);
@@ -51,8 +52,12 @@ public class GameLoopTest {
             assertEquals(target.GetBoard(),GGS.getGS().GetBoard());
             assertEquals(target.getKataTerbentuk(),GGS.getGS().getKataTerbentuk());
         }catch(InterruptedException ie){}
+        sleep(2000);
         
+        instance.interrupt();
+        instance.join();
         
+        assertFalse(instance.isAlive());
         
 
     }
