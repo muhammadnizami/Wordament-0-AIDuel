@@ -30,15 +30,20 @@ public class RandomAITest {
     @Test
     public void testRun() throws InterruptedException {
         GameState GS = new GameState();
-        GameLoop A = new GameLoop();
-        RandomAI RAI = new RandomAI(A);
-        A.start();
+        GameLoop GL = new GameLoop();
+        RandomAI RAI = new RandomAI(GL);
+        GL.start();
         Thread RAIThread = new Thread(RAI);
         RAIThread.start();
         sleep(1000);
         RAIThread.interrupt();
-        A.interrupt();
+        GL.interrupt();
+        RAIThread.join();
+        GL.join();
         assertNotNull(GS.GetBoard());
+        sleep(2000);
+        assertFalse(RAIThread.isAlive());
+        assertFalse(GL.isAlive());
     }
     
 }

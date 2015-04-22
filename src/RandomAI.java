@@ -31,7 +31,7 @@ public class RandomAI implements AIPlayer {
     public void run(){
         Random r = new Random();
         while (!Thread.currentThread().isInterrupted()){
-            try{
+            try{                
                 sleep(100);
                 int a = r.nextInt(11);
                 switch(a){
@@ -73,7 +73,7 @@ public class RandomAI implements AIPlayer {
                     
                 }
             }catch(InterruptedException e){
-                //do nothing
+                break;
             }
         }
     }
