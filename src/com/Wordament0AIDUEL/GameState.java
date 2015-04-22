@@ -18,7 +18,7 @@ import java.awt.Point;
  */
 public class GameState {
     private Board CB;
-    private Set<String> kamus;
+    private final Set<String> kamus;
     private SortedSet<Kata> kataTerbentuk;
     
     /**ctor*/
