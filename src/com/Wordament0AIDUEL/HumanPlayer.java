@@ -8,6 +8,7 @@ import com.Wordament0AIDUEL.PerintahStartStopBuatKata;
 import java.awt.Component;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import static java.lang.Thread.sleep;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -74,14 +75,18 @@ public class HumanPlayer implements Player {
                     GL.lakukanPerintah(new PerintahStartStopBuatKata());
                     break;
             }
+            keyPressSource.requestFocus();
         }
     }
     @Override
     public void run(){
         PKeyListener tmpKeyListener = new PKeyListener();
+        keyPressSource.requestFocus();
         keyPressSource.addKeyListener(tmpKeyListener);
-        try{(new Object()).wait();}
+        System.out.println("check");
+        try{this.wait();}
         catch(InterruptedException ie){}
+        
         keyPressSource.removeKeyListener(tmpKeyListener);
     }
     @Override
