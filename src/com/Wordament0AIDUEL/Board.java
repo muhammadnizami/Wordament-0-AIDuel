@@ -213,7 +213,7 @@ public class Board {
         int i,j;
         i = (int)p.x;
         j = (int)p.y;
-        p.setLocation(j,4-i);
+        p.setLocation(j,3-i);
     }
     private void mcPutar(char[][] M){
         char[][] Mtmp = new char[M.length][];
