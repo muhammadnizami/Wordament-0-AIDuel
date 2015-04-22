@@ -17,7 +17,7 @@ public class PerintahGetGameState implements Perintah {
     /*Method*/
     @Override
     public synchronized void execute(GameState _GS){
-        GS = new GameState(_GS);
+        GS = new GameState(_GS,false);
         
         //memberi tahu
         executed = true;
