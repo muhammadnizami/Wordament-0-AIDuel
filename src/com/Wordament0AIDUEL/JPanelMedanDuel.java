@@ -45,7 +45,16 @@ public class JPanelMedanDuel extends javax.swing.JPanel {
         HPThread.start();
         AIThread.start();
         
-        sleep(100000);
+        //timer
+        
+        long now = System.currentTimeMillis();
+        long start = now;
+        while(now-start < 120000){
+            if(System.currentTimeMillis()-now>=100){
+                now=System.currentTimeMillis();
+                jLabel3.setText("timeLeft: "+(120000-(now-start))+"ms");
+            }
+        }
         
         AIGameLoop.interrupt();
         HumanGameLoop.interrupt();
@@ -61,6 +70,17 @@ public class JPanelMedanDuel extends javax.swing.JPanel {
         HPThread.join();
         AIThread.join();
         
+        int humanscore = HumanGameState.totalScore();
+        int AIscore = AIGameState.totalScore();
+        if (humanscore<AIscore){
+            jLabel3.setText("AI menang\n" + humanscore + "-" + AIscore);
+        }else if (humanscore==AIscore){
+            jLabel3.setText("Seri\n" + humanscore + "-" + AIscore);
+            
+        }else{
+            jLabel3.setText("Manusia menang\n" + humanscore + "-" + AIscore);
+            
+        }
     }
     
     private class DisplayThread extends Thread{
