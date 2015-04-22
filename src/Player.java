@@ -8,7 +8,13 @@
  *
  * @author guest
  */
-public interface Player {
+public interface Player extends Runnable {
+    @Override
     public void run();
+
+    /**
+     * menetapkan GameLoop yang menjadi agen
+     * @param GL agen dari perintah yang dikirimkan
+     */
     public void setGame (GameLoop GL);
 }
