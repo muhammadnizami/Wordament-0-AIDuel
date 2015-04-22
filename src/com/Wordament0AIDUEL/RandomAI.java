@@ -19,6 +19,10 @@ public class RandomAI implements AIPlayer {
      * 
      * @param _GL Gameloop yang menerima perintah dari AIPlayer ini
      */
+    public RandomAI(){
+        GL = null;
+    }
+    
     public RandomAI(GameLoop _GL){
             GL = _GL;
     }
