@@ -53,6 +53,12 @@ public class GameState {
         kamus = new TreeSet<>(G.kamus);
         kataTerbentuk = new TreeSet<>(G.kataTerbentuk);
     }
+    public GameState(GameState G, boolean copyKamus){
+        CB = new Board(G.CB);
+        if (copyKamus)kamus = new TreeSet<>(G.kamus);
+        else kamus = G.kamus;
+        kataTerbentuk = new TreeSet<>(G.kataTerbentuk);
+    }
     
     /**memulai/mengakhiri pembuatan kata
      * 
