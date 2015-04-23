@@ -73,12 +73,12 @@ public class JPanelMedanDuel extends javax.swing.JPanel {
         int humanscore = HumanGameState.totalScore();
         int AIscore = AIGameState.totalScore();
         if (humanscore<AIscore){
-            jLabel3.setText("AI menang\n" + humanscore + "-" + AIscore);
+            jLabel3.setText("AI menang:\t" + humanscore + "-" + AIscore);
         }else if (humanscore==AIscore){
-            jLabel3.setText("Seri\n" + humanscore + "-" + AIscore);
+            jLabel3.setText("Seri:\t" + humanscore + "-" + AIscore);
             
         }else{
-            jLabel3.setText("Manusia menang\n" + humanscore + "-" + AIscore);
+            jLabel3.setText("Manusia menang:\t" + humanscore + "-" + AIscore);
             
         }
     }
