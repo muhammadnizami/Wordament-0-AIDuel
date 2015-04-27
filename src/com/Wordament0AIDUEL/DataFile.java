@@ -14,7 +14,7 @@ import java.util.Set;
 
 /**
  *
- *
+ * Berfungsi untuk mengakses file;
  */
 public class DataFile {
     private File F;

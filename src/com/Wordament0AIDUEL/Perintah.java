@@ -8,7 +8,7 @@ package com.Wordament0AIDUEL;
 
 /**
  *
- * @author guest
+ * interface untuk kelas perintah
  */
 public interface Perintah {
     public void execute (GameState GS);

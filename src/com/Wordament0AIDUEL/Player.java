@@ -8,7 +8,7 @@ package com.Wordament0AIDUEL;
 
 /**
  *
- * @author guest
+ * interface untuk Player
  */
 public interface Player extends Runnable {
     @Override

@@ -13,7 +13,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  *
- * @author nim_13512501
+ * Berungsi sebagai agen perintah
  */
 public class GameLoop extends Thread{
     private GameState GS;
