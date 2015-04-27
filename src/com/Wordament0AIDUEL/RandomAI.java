@@ -15,13 +15,14 @@ import java.util.Random;
  */
 public class RandomAI implements AIPlayer {
     private GameLoop GL;
+    public RandomAI(){
+        GL = null;
+    }
+    
     /**
      * 
      * @param _GL Gameloop yang menerima perintah dari AIPlayer ini
      */
-    public RandomAI(){
-        GL = null;
-    }
     
     public RandomAI(GameLoop _GL){
             GL = _GL;
