@@ -10,7 +10,7 @@ import java.util.Set;
 
 /**
  *
- * @author nim_13512501
+ *  Panel tempat permainan berlangsung
  */
 public class JPanelMedanDuel extends javax.swing.JPanel {
 

@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author nim_13512501
+ * Tempat untuk menampilkan board 
  */
 public class JPanelGameState extends javax.swing.JPanel {
 

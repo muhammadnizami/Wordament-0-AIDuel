@@ -21,7 +21,7 @@ import javax.swing.ListModel;
 import javax.swing.SwingWorker;
 /**
  *
- * @author nim_13512501
+ *Panel tempat awal mula game dijalankan, tempat memilih AI yang akan dilawan
  */
 public class JPanelKonfigurasi extends javax.swing.JPanel {
 
